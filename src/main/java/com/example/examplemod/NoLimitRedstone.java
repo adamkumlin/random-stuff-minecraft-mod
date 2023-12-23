@@ -48,13 +48,6 @@ public class NoLimitRedstone
     // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
     public static final RegistryObject<Item> PINKSTONE_DUST_ITEM = ITEMS.register("pinkstone_dust", () -> new BlockItem(PINKSTONE_DUST.get(), new Item.Properties().stacksTo(64)));
 
-    // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
-    public static final RegistryObject<CreativeModeTab> NO_LIMIT_REDSTONE_TAB = CREATIVE_MODE_TABS.register("no_limit_redstone_tab", () -> CreativeModeTab.builder()
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .displayItems((parameters, output) -> {
-                output.accept(PINKSTONE_DUST_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
-            }).build());
-
     public NoLimitRedstone()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
