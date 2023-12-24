@@ -26,7 +26,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.nolimitredstone.item.Items;
+import net.nolimitredstone.item.ModItems;
 
 import org.slf4j.Logger;
 
@@ -43,7 +43,7 @@ public class NoLimitRedstone
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        Items.register(modEventBus);
+        ModItems.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -60,8 +60,11 @@ public class NoLimitRedstone
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS)
-            event.accept(Items.PINKSTONE_DUST);
+        if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
+            
+            event.accept(ModItems.PINKSTONE_DUST);
+            event.accept(ModItems.NAM);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
