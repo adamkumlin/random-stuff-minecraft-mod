@@ -6,7 +6,7 @@ issueTrackerURL="https://github.com/MinecraftForge/MinecraftForge/issues"
 showAsResourcePack=false
 
 [[mods]]
-  modId="nolimitredstone"
+  modId="randomstuff"
   version="1.0.0.0"
   displayName="No Limit Redstone"
   updateJSONURL="https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json"
