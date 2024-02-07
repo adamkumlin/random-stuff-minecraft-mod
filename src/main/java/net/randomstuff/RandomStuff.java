@@ -1,4 +1,4 @@
-package net.nolimitredstone;
+package net.randomstuff;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -26,20 +26,20 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.nolimitredstone.item.ModItems;
+import net.randomstuff.item.ModItems;
 
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(NoLimitRedstone.MODID)
-public class NoLimitRedstone
+@Mod(RandomStuff.MODID)
+public class RandomStuff
 {
     // Define mod id in a common place for everything to reference
-    public static final String MODID = "nolimitredstone";
+    public static final String MODID = "randomstuff";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public NoLimitRedstone()
+    public RandomStuff()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -62,8 +62,7 @@ public class NoLimitRedstone
     {
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
             
-            event.accept(ModItems.PINKSTONE_DUST);
-            event.accept(ModItems.NAM);
+            event.accept(ModItems.PINKSTONE_BLOCK);
         }
     }
 
