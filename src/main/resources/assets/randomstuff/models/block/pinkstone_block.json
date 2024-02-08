@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "randostuff:block/pinkstone_block"
+    "all": "randomstuff:block/pinkstone_block"
   }
 }
