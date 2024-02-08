@@ -49,6 +49,9 @@ public class RandomStuff
         // Register all items in the "ITEMS" registry
         Registration.ITEMS.register(modEventBus);
 
+        // Register all recipes in the "RECIPE_SERIALIZERS" registry
+        Registration.RECIPE_SERIALIZERS.register(modEventBus);
+
         // Register the blocks in the creative menu
         modEventBus.addListener(Registration::addCreative);
     }

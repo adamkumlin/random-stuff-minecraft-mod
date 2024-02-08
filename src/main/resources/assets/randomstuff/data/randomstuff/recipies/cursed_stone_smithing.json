@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:netherite_pickaxe"
+  },
+  "addition": {
+    "item": "randomstuff:cursed_stone"
+  },
+  "result": "randomstuff:cursed_pickaxe",
+  "experience": 1
+}
