@@ -40,12 +40,16 @@ public class RandomStuff
 
     public RandomStuff()
     {
+        // Declare modEventBus to register items/blocks/etc.
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        // Register all blocks in the "BLOCKS" registry
         Registration.BLOCKS.register(modEventBus);
 
+        // Register all items in the "ITEMS" registry
         Registration.ITEMS.register(modEventBus);
 
+        // Register the blocks in the creative menu
         modEventBus.addListener(Registration::addCreative);
     }
 
