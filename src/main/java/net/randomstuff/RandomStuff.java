@@ -26,8 +26,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.randomstuff.block.ModBlocks;
-import net.randomstuff.item.ModItems;
 
 import org.slf4j.Logger;
 
@@ -42,26 +40,21 @@ public class RandomStuff
 
     public RandomStuff()
     {
+        // Declare modEventBus to register items/blocks/etc.
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(modEventBus);
+        // Register all blocks in the "BLOCKS" registry
+        Registration.BLOCKS.register(modEventBus);
 
-        ModBlocks.register(modEventBus);
+        // Register all items in the "ITEMS" registry
+        Registration.ITEMS.register(modEventBus);
 
-        modEventBus.addListener(this::addCreative);
+        // Register the blocks in the creative menu
+        modEventBus.addListener(Registration::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
 
     }
-
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-        if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
-            
-            event.accept(ModItems.PINKSTONE_BLOCK_ITEM);
-        }
-    }
-
 }
