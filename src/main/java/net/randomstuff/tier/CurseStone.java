@@ -1,11 +1,8 @@
-package net.randomstuff.item;
+package net.randomstuff.tier;
 
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.block.Block;
-import org.jetbrains.annotations.Nullable;
 
 public class CurseStone implements Tier {
 
@@ -34,12 +31,8 @@ public class CurseStone implements Tier {
         return 100;
     }
 
+    @Override
     public Ingredient getRepairIngredient() {
         return Ingredient.of(Items.IRON_BLOCK);
-    }
-
-    @Override
-    public @Nullable TagKey<Block> getTag() {
-        return Tier.super.getTag();
     }
 }
