@@ -11,9 +11,8 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.randomstuff.item.CursedPickaxeItem;
-import net.randomstuff.tier.CurseStone;
-import org.jline.utils.Curses;
+import net.randomstuff.items.CursedPickaxeItem;
+import net.randomstuff.tier.ModTiers;
 
 public class Registration {
 
@@ -29,8 +28,7 @@ public class Registration {
 
     public static final RegistryObject<Item> CURSED_STONE_ITEM = ITEMS.register("cursed_stone", () -> new Item(new Item.Properties().stacksTo(16)));
 
-    private static final Tier CurseStone = new CurseStone();
-    public static final RegistryObject<Item> CURSED_PICKAXE = ITEMS.register("cursed_pickaxe", () -> new CursedPickaxeItem(CurseStone,10, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> CURSED_PICKAXE = ITEMS.register("cursed_pickaxe", () -> new CursedPickaxeItem(ModTiers.CURSE_STONE,10, -2.8F, new Item.Properties()));
 
     public static void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {

@@ -1,4 +1,4 @@
-package net.randomstuff.item;
+package net.randomstuff.items;
 
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.Tier;
