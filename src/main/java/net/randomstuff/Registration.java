@@ -7,11 +7,11 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.randomstuff.items.CursedPickaxeItem;
 import net.randomstuff.tier.ModTiers;
 
 public class Registration {
@@ -23,12 +23,12 @@ public class Registration {
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, RandomStuff.MODID);
 
     // Create new block, and link it to a blockitem
-    public static final RegistryObject<Block> PINKSTONE_BLOCK = BLOCKS.register("pinkstone_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.REDSTONE_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> PINKSTONE_BLOCK = BLOCKS.register("pinkstone_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Item> PINKSTONE_BLOCK_ITEM = ITEMS.register("pinkstone_block", () -> new BlockItem(PINKSTONE_BLOCK.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> CURSED_STONE_ITEM = ITEMS.register("cursed_stone", () -> new Item(new Item.Properties().stacksTo(16)));
 
-    public static final RegistryObject<Item> CURSED_PICKAXE = ITEMS.register("cursed_pickaxe", () -> new CursedPickaxeItem(ModTiers.CURSE_STONE,10, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> CURSED_PICKAXE = ITEMS.register("cursed_pickaxe", () -> new PickaxeItem(ModTiers.CURSE_STONE,10, -2.8F, new Item.Properties()));
 
     public static void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {

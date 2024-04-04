@@ -7,6 +7,6 @@ import net.minecraft.world.level.block.Block;
 
 public class ModTags {
     public static class Blocks {
-        public static final TagKey<Block> NEEDS_CURSESTONE_TOOL = BlockTags.create(new ResourceLocation("randomstuff", "needs_cursestone_tool"));
+        public static final TagKey<Block> NEEDS_CURSESTONE_TOOL = BlockTags.create(new ResourceLocation("assets", "needs_cursestone_tool"));
     }
 }
