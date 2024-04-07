@@ -11,6 +11,7 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.RegistryObject;
 import net.randomstuff.tier.ModTiers;
 
@@ -27,9 +28,9 @@ public class Registration {
     public static final RegistryObject<Item> PINKSTONE_BLOCK_ITEM = ITEMS.register("pinkstone_block", () -> new BlockItem(PINKSTONE_BLOCK.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> CURSED_STONE_ITEM = ITEMS.register("cursed_stone", () -> new Item(new Item.Properties().stacksTo(16)));
-
     public static final RegistryObject<Item> CURSED_PICKAXE = ITEMS.register("cursed_pickaxe", () -> new PickaxeItem(ModTiers.CURSE_STONE,10, -2.8F, new Item.Properties()));
 
+    public static final RegistryObject<Block> BREAKABLE_BEDROCK_BLOCK = BLOCKS.register("breakable_bedrock_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK).strength(100)));
     public static void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
             event.accept(PINKSTONE_BLOCK_ITEM);
