@@ -17,3 +17,4 @@ public class ModTiers {
             new ForgeTier(5, 1, 3000F, 3F, 5, ModTags.Blocks.NEEDS_CURSESTONE_TOOL, () -> Ingredient.of(Items.IRON_BLOCK)),
             new ResourceLocation("assets", "curse_stone"), List.of(Tiers.NETHERITE), List.of());
 }
+

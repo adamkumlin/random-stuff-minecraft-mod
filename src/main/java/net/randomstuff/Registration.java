@@ -23,7 +23,7 @@ public class Registration {
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, RandomStuff.MODID);
 
     // Create new block, and link it to a blockitem
-    public static final RegistryObject<Block> PINKSTONE_BLOCK = BLOCKS.register("pinkstone_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> PINKSTONE_BLOCK = BLOCKS.register("pinkstone_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Item> PINKSTONE_BLOCK_ITEM = ITEMS.register("pinkstone_block", () -> new BlockItem(PINKSTONE_BLOCK.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> CURSED_STONE_ITEM = ITEMS.register("cursed_stone", () -> new Item(new Item.Properties().stacksTo(16)));
