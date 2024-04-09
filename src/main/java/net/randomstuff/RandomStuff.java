@@ -21,13 +21,15 @@ public class RandomStuff
         // Declare modEventBus to register items/blocks/etc.
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // Register all blocks in the "BLOCKS" registry
-        Registration.BLOCKS.register(modEventBus);
+        // Register all block/item registries
+        Registration.MOD_BLOCKS.register(modEventBus);
 
-        // Register all items in the "ITEMS" registry
-        Registration.ITEMS.register(modEventBus);
+        Registration.VANILLA_BLOCKS.register(modEventBus);
 
-        // Register all recipes in the "RECIPE_SERIALIZERS" registry
+        Registration.VANILLA_ITEMS.register(modEventBus);
+
+        Registration.MOD_ITEMS.register(modEventBus);
+
         Registration.RECIPE_SERIALIZERS.register(modEventBus);
 
         // Register the blocks in the creative menu

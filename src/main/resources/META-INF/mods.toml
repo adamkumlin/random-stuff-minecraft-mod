@@ -13,7 +13,7 @@ updateJSONURL="https://files.minecraftforge.net/net/minecraftforge/forge/promoti
 displayURL="https://minecraftforge.net"
 logoFile="logo.png"
 credits="Did I do it?"
-authors="gachiBASS"
+authors="Simon Sörqvist & Adam Kumlin"
 description='''
   Adds random stuff. Nuff said.
   '''
