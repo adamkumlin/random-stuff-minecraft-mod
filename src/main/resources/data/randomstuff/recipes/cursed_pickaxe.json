@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " x ",
+    " a ",
+    "   "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "randomstuff:cursed_stone",
+      "data": 0
+    },
+    "a":
+    {
+      "item": "minecraft:netherite_pickaxe",
+      "data": 1
+    }
+  },
+  "result":
+  {
+    "item": "randomstuff:cursed_pickaxe",
+    "count": 1,
+    "data": 2
+  }
+}

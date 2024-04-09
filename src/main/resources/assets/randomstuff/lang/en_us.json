@@ -1,3 +1,5 @@
 {
-    "block.randomstuff.pinkstone_block": "Pinkstone Block"
+    "block.randomstuff.pinkstone_block": "Pinkstone Block",
+    "item.randomstuff.cursed_stone": "Cursed Stone",
+    "item.randomstuff.cursed_pickaxe": "Cursed Pickaxe"
 }
