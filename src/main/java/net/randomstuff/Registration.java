@@ -11,6 +11,7 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.randomstuff.block.BuildersAccordionBlock;
 import net.randomstuff.tier.ModTiers;
 
 public class Registration {
@@ -41,6 +42,8 @@ public class Registration {
     public static final RegistryObject<Block> BEDROCK_BLOCK = VANILLA_BLOCKS.register("bedrock", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK).strength(100000)));
     public static final RegistryObject<Item> BEDROCK_ITEM = VANILLA_ITEMS.register("bedrock", () -> new BlockItem(BEDROCK_BLOCK.get(), new Item.Properties()));
 
+    public static final RegistryObject<Block> BUILDERS_ACCORDION_BLOCK = MOD_BLOCKS.register("builders_accordion", () -> new BuildersAccordionBlock(BlockBehaviour.Properties.of()));
+    public static final RegistryObject<Item> BUILDERS_ACCORDION_ITEM = MOD_ITEMS.register("builders_accordion", () -> new BlockItem(BUILDERS_ACCORDION_BLOCK.get(), new Item.Properties()));
     public static void addCreative(BuildCreativeModeTabContentsEvent event) {
         // Add items to creative mode tabs
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
@@ -49,6 +52,7 @@ public class Registration {
             event.accept(CURSED_STONE_ITEM);
         } else if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(CURSED_PICKAXE);
+            event.accept(BUILDERS_ACCORDION_ITEM);
         } else if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(BEDROCK_ITEM);
         }
